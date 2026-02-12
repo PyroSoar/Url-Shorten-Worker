@@ -7,5 +7,6 @@ kv_namespaces = [
 ]
 
 assets = { directory = "./public" }
+route = "lnk.lzc2002.top/*"  #明确指定 worker 处理所有路由
 [observability]
 enabled = false
