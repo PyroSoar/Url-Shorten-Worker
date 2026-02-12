@@ -102,7 +102,7 @@ async function handleRequest(request, env) {
 
   // POST: 创建短链
   console.log('🔍 处理请求:', request.method, path)
-  if (request.method === "POST" && path === "/api/shorten") {
+  if (request.method === "POST" && path === "api/shorten") {
     const req = await request.json()
     if (!await checkURL(req.url)) {
       return new Response(`{"status":500,"key":": Error: Url illegal."}`, {
