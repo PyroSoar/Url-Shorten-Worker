@@ -7,3 +7,5 @@ kv_namespaces = [
 ]
 
 assets = { directory = "./public" }
+[observability]
+enabled = false
