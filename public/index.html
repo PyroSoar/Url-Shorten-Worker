@@ -6,6 +6,14 @@
   <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
   <title>短网址生成器</title>
   <style>
+    .btn-primary{
+      background-color: #c2185b;
+      border-color: #c2185b;
+    }
+    .btn-primary:hover{
+      background-color: #ad1457;
+      border-color: #ad1457;
+    }
     * {
       margin: 0;
       padding: 0;
@@ -37,7 +45,7 @@
     }
     .card-text > a {
       text-decoration: none;
-      color: #007bff;
+      color: #c2185b;
     }
     .card-text > a {
       cursor: pointer;
@@ -72,7 +80,7 @@
     <div class="card-body">
       <h5 class="card-title">输入原网址：</h5>
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Example: https://example.com/" id="text">
+        <input type="text" class="form-control" placeholder="例如: https://example.com/" id="text">
         <div class="input-group-append">
           <button class="btn btn-primary" type="button" onclick='shorturl()' id="searchbtn">缩短</button>
         </div>
@@ -83,20 +91,20 @@
   <div id="beian" style="
     position: absolute;
     bottom: 10px;
-"><img src="https://lzc2002.top//medias/icons/beian.png"> <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011502001113"><img src="" style="float:left"><span style="cursor: pointer;">粤公网安备 44011502001113号</span></a></div>
+"><img src="https://lzc2002.top//medias/icons/beian.png"><a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011502001113"><span style="cursor: pointer;">粤公网安备 44011502001113号</span></a><a target="_blank" href="https://beian.miit.gov.cn/"><span style="cursor: pointer;">粤ICP备2023073334号-1</span></a><a target="_blank" href="https://beian.miit.gov.cn/"><span style="cursor: pointer;">粤ICP备2023073334号-2A</span></a><a target="_blank" href="https://beian.miit.gov.cn/"><span style="cursor: pointer;">粤ICP备2023073334号-3K</span></a></div>
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Result</h5>
+          <h5 class="modal-title" id="exampleModalLabel">结果</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body" id="result">No result</div>
+        <div class="modal-body" id="result">无结果</div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">Copy</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
+          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="已复制">复制</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>    
         </div>
       </div>
     </div>
