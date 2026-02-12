@@ -101,7 +101,7 @@ async function handleRequest(request, env) {
   const params = url.search
 
   // POST: 创建短链
-  if (request.method === "POST") {
+  if (request.method === "POST" && path === "/api/shorten") {
     const req = await request.json()
     if (!await checkURL(req.url)) {
       return new Response(`{"status":500,"key":": Error: Url illegal."}`, {
