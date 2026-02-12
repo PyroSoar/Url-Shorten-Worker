@@ -101,6 +101,7 @@ async function handleRequest(request, env) {
   const params = url.search
 
   // POST: 创建短链
+  console.log('🔍 处理请求:', request.method, path)
   if (request.method === "POST" && path === "/api/shorten") {
     const req = await request.json()
     if (!await checkURL(req.url)) {
