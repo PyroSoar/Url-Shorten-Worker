@@ -1,0 +1,9 @@
+name = "url-shortener"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+kv_namespaces = [
+  { binding = "LINKS", id = "63fb970252af44d88d32eb07fe4abb1a" }
+]
+
+assets = { directory = "./public" }
