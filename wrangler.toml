@@ -7,4 +7,3 @@ kv_namespaces = [
 ]
 
 assets = { directory = "./public" }
-rules = [ { type = "Text", globs = ["**/*"], fallthrough = true } ]
