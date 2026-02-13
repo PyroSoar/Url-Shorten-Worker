@@ -49,7 +49,7 @@ async function sha512(url) {
 }
 
 async function checkURL(url) {
-  const reg = /^https?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?$/
+  const reg = /^https?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=#]*)?$/
   return reg.test(url)
 }
 

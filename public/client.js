@@ -5,7 +5,7 @@ function shorturl() {
     return;
   }
   function checkURL(url) {
-    const reg = /^https?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?$/;
+    const reg = /^https?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=#]*)?$/;
     return reg.test(url);
   }
   if (!checkURL(document.querySelector("#text").value)) {
