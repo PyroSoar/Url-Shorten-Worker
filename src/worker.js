@@ -103,7 +103,8 @@ async function handleRequest(request, env) {
   if (request.method === "POST" && path === "api/shorten") {
     const req = await request.json()
     if (!await checkURL(req.url)) {
-      return new Response(`{"status":500,"key":": Error: Url illegal."}`, {
+      return new Response(JSON.stringify({ status: 500, key: ": Error: Url illegal." }), {
+        status: 500,
         headers: responseHeader()
       })
     }
