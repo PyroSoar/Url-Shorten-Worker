@@ -95,6 +95,10 @@ function copyurl(id, attr) {
   }
 }
 document.addEventListener('DOMContentLoaded', function() {
+  if (document.body.clientWidth>600 && window.self === window.top){
+    window.open("https://lzc2002.top/tools/tools-pc.html?src=https%3A%2F%2Flnk.lzc2002.top%2F","_self");
+    return;
+  }
   // Initialize popovers without jQuery.
   var popoverEls = document.querySelectorAll('[data-bs-toggle="popover"], [data-toggle="popover"]');
   if (popoverEls.length) {
@@ -126,9 +130,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     }
-  }
-
-  if (document.body.clientWidth>600 && window.self === window.top){
-    window.open("https://lzc2002.top/tools/tools-pc.html?src=https%3A%2F%2Flnk.lzc2002.top%2F","_self");
   }
 });
