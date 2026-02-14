@@ -77,7 +77,7 @@ function copyurl(id, attr) {
 }
 $(function () {
   $('[data-toggle="popover"]').popover();
-  if (document.body.clientWidth>600){
+  if (document.body.clientWidth>600 && window.self === window.top){
     window.open("https://lzc2002.top/tools/tools-pc.html?src=https%3A%2F%2Flnk.lzc2002.top%2F","_self");
   }
 });
