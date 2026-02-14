@@ -96,7 +96,7 @@ function copyurl(id, attr) {
 }
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize popovers without jQuery.
-  var popoverEls = document.querySelectorAll('[data-toggle="popover"]');
+  var popoverEls = document.querySelectorAll('[data-bs-toggle="popover"], [data-toggle="popover"]');
   if (popoverEls.length) {
     if (window.bootstrap && bootstrap.Popover) {
       popoverEls.forEach(function (el) {
