@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务条款与隐私政策</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        :root {
+            --primary-color: #c2185b;
+            --primary-light: #e91e63;
+            --primary-dark: #880e4f;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --text-light: #666;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --radius: 8px;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(194, 24, 91, 0.2);
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .last-updated {
+            background-color: rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        /* 选择器区域 */
+        .selector-container {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .selector-container h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .selector-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+
+        .lang-selector {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .selector-btn {
+            background-color: white;
+            border: 2px solid var(--border-color);
+            padding: 0.9rem 1.8rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 180px;
+            justify-content: center;
+        }
+
+        .lang-btn {
+            background-color: white;
+            border: 2px solid var(--border-color);
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .selector-btn:hover, .lang-btn:hover {
+            border-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .selector-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .lang-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* 内容区域样式 */
+        .content-section {
+            display: none;
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        h3 {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+            margin: 1.8rem 0 1rem;
+        }
+
+        h4 {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin: 1.2rem 0 0.8rem;
+        }
+
+        p {
+            margin: 0.5rem 0;
+            color: var(--text-light);
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* 链接样式 - 统一为主题色 */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        .email-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .email-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background-color: rgba(194, 24, 91, 0.05);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .important-note {
+            background-color: #fff8e1;
+            border: 1px solid #ffd54f;
+            padding: 1.2rem;
+            border-radius: var(--radius);
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        .important-note i {
+            color: #ff9800;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .contact-info {
+            background-color: rgba(194, 24, 91, 0.08);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .contact-info h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        /* 备案信息样式 */
+        .icp-info {
+            background-color: #f8f9fa;
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .icp-number {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icp-number i {
+            font-size: 1.4rem;
+        }
+
+        .icp-detail {
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* 同意按钮区域 */
+        .agreement-container {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+            text-align: center;
+            display: none;
+        }
+
+        .agreement-container h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .agreement-btn {
+            background: linear-gradient(135deg, color-mix(in srgb, var(--primary-dark) 80%, transparent), color-mix(in srgb, var(--primary-color) 80%, transparent));
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(194, 24, 91, 0.2);
+            position: fixed;
+            width: max-content;
+            max-width: 90vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            bottom: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .agreement-btn:hover {
+            transform: translate(-50%,-2px);
+            box-shadow: 0 6px 16px rgba(194, 24, 91, 0.3);
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #333;
+            color: #ddd;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .selector-btn {
+                padding: 0.8rem 1.5rem;
+                min-width: 160px;
+                font-size: 1rem;
+            }
+            
+            .lang-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .content-section {
+                padding: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .selector-buttons {
+                gap: 10px;
+            }
+            
+            .selector-btn {
+                min-width: 140px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .selector-buttons{
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .selector-btn{
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .content-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 id="main-title">服务条款与隐私政策</h1>
+            <p id="subtitle" class="subtitle">请在使用我们的服务前，仔细阅读以下条款和政策</p>
+            <div id="last-updated" class="last-updated">
+                <i class="far fa-calendar-alt"></i> 最后更新日期：2026年2月19日
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 选择器区域 -->
+        <div class="selector-container">
+            <h2><i class="fas fa-cog"></i> <span id="selector-title">选择</span></h2>
+            
+            <!-- 语言选择 -->
+            <div class="lang-selector">
+                <button class="lang-btn active" data-lang="zh">
+                    <i class="fas fa-language"></i> 中文
+                </button>
+                <button class="lang-btn" data-lang="en">
+                    <i class="fas fa-language"></i> English
+                </button>
+            </div>
+            
+            <!-- 文档选择 -->
+            <div class="selector-buttons">
+                <button class="selector-btn active" data-doc="terms" data-zh="服务条款" data-en="Terms of Service">
+                    <i class="fas fa-balance-scale"></i> <span class="btn-text">服务条款</span>
+                </button>
+                <button class="selector-btn" data-doc="privacy" data-zh="隐私政策" data-en="Privacy Policy">
+                    <i class="fas fa-user-shield"></i> <span class="btn-text">隐私政策</span>
+                </button>
+                <button class="selector-btn" data-doc="icp" data-zh="备案信息" data-en="Filing Information">
+                    <i class="fas fa-file-alt"></i> <span class="btn-text">备案信息</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 服务条款 (中文) -->
+        <section id="terms-zh" class="content-section active">
+            <h2 class="section-title">服务条款</h2>
+            <p><strong>生效日期：2026年2月19日</strong></p>
+            
+            <h3>1. 概述</h3>
+            <p>本服务条款是您（"用户"）与<b>林卓城</b>（以下称"运营方"）之间，就您使用由运营方提供的包括但不限于博客、评论区、在线工具在内的网络服务（统称"本服务"）所订立的协议。请仔细阅读。您对本服务的任何访问、注册、登录或使用行为，即表示您已充分阅读、理解并同意接受本条款的全部约束。若您不同意本条款的任何内容，请立即停止使用本服务。</p>
+            
+            <h3>2. 适用范围与法律遵从</h3>
+            <p>2.1 本服务在全球范围内可供访问。运营方在中华人民共和国境内运营本服务，并遵守中华人民共和国法律法规。</p>
+            <p>2.2 您在使用本服务时，承诺同时遵守您所在国家或地区的法律法规。</p>
+            <p>2.3 运营方保留根据法律法规要求或运营需要，限制向特定国家、地区或用户提供服务的权利。</p>
+            
+            <h3>3. 账户与安全</h3>
+            <p>3.1 您可通过电子邮箱直接注册，或使用经运营方接入的第三方平台账号进行授权登录。</p>
+            <p>3.2 您应妥善保管账户信息及密码，并对该账户下的一切活动承担法律责任。</p>
+            
+            <h3>4. 用户行为规范</h3>
+            <p>您不得利用本服务制作、上传、复制、发布、传播任何违反中华人民共和国法律法规、政策，以及您所在国家/地区法律法规的内容。运营方有权对违规内容及账户采取删除、屏蔽、中止服务等措施。</p>
+            
+            <h3>5. 免责声明</h3>
+            <p>5.1 本服务按"现状"提供，运营方不保证服务不会中断或完全无缺陷。</p>
+            <p>5.2 因不可抗力、网络环境、通讯线路、第三方服务故障等原因导致的服务中断或数据丢失，运营方不承担责任。</p>
+            
+            <h3>6. 知识产权</h3>
+            <p>6.1 本服务相关的软件、界面、设计、logo等知识产权归运营方所有。</p>
+            <p>6.2 您在使用本服务过程中创作、发布的内容，知识产权归您或相关权利人所有。您授予运营方一项全球性、免费的许可，允许运营方为提供、推广本服务之目的使用您的内容。</p>
+            
+            <h3>7. 条款修改与终止</h3>
+            <p>运营方有权随时修改本条款。修改后的条款将于公布时生效。您若继续使用服务，即视为接受修改后的条款。</p>
+            
+            <h3>8. 法律适用与争议解决</h3>
+            <p>8.1 本条款的订立、执行和解释均适用中华人民共和国法律。</p>
+            <p>8.2 因本条款引起的任何争议，双方应首先友好协商解决；协商不成的，任何一方均有权将争议提交至<strong>运营方所在地有管辖权的人民法院</strong>诉讼解决。</p>
+            
+            <div class="contact-info">
+                <h4>联系信息</h4>
+                <p>如对本条款有任何疑问，请联系：</p>
+                <a href="mailto:i@lzc2002.top" class="email-link">i@lzc2002.top</a>
+            </div>
+        </section>
+
+        <!-- 服务条款 (English) -->
+        <section id="terms-en" class="content-section">
+            <h2 class="section-title">Terms of Service</h2>
+            <p><strong>Effective Date: February 19, 2026</strong></p>
+            
+            <h3>1. Overview</h3>
+            <p>These Terms of Service constitute a legally binding agreement between you and <b>Lin Zhuocheng</b> (the "Operator") regarding your use of the web services provided, including but not limited to blog, comment section, and online tools. Please read these Terms carefully. Any access, registration, login, or use signifies that you have agreed to be bound by all the provisions herein. If you do not agree, please discontinue use immediately.</p>
+            
+            <h3>2. Scope and Legal Compliance</h3>
+            <p>2.1 The Services are accessible globally. The Operator operates within the territory of the People's Republic of China and complies with its laws.</p>
+            <p>2.2 You promise to comply with the laws of your own country or region while using the Services.</p>
+            <p>2.3 The Operator reserves the right to restrict provision of the Services based on legal requirements or operational needs.</p>
+            
+            <h3>3. Account and Security</h3>
+            <p>3.1 You may register with an email or log in via authorized third-party platforms.</p>
+            <p>3.2 You are responsible for safeguarding your account credentials and for all activities under your account.</p>
+            
+            <h3>4. User Conduct</h3>
+            <p>You shall not use this service to create, upload, copy, publish, or disseminate any content that violates the laws, regulations, and policies of the People's Republic of China, as well as the laws and regulations of your country/region. The operator has the right to take measures such as deletion, blocking, and suspension of services against violating content and accounts.</p>
+            
+            <h3>5. Disclaimer</h3>
+            <p>5.1 The Services are provided "as is". The Operator does not warrant uninterrupted or error-free service.</p>
+            <p>5.2 The Operator shall not be liable for service interruptions or data loss caused by force majeure, network conditions, or third-party failures.</p>
+            
+            <h3>6. Intellectual Property</h3>
+            <p>6.1 Intellectual property rights related to the Services belong to the Operator.</p>
+            <p>6.2 The intellectual property of the content you create remains with you. You grant the Operator a worldwide, royalty-free license to use your content for providing and promoting the Services.</p>
+            
+            <h3>7. Modification and Termination</h3>
+            <p>The Operator may modify these Terms at any time. Modified Terms are effective upon publication. Continued use signifies acceptance.</p>
+            
+            <h3>8. Governing Law and Dispute Resolution</h3>
+            <p>8.1 These Terms shall be governed by the laws of the People's Republic of China.</p>
+            <p>8.2 Any dispute shall first be resolved through friendly negotiation. If negotiation fails, either party may submit the dispute to <strong>the competent people's court in the location of the Operator</strong>.</p>
+            
+            <div class="contact-info">
+                <h4>Contact Information</h4>
+                <p>For questions regarding these Terms, contact:</p>
+                <a href="mailto:i@lzc2002.top" class="email-link">i@lzc2002.top</a>
+            </div>
+        </section>
+
+        <!-- 隐私政策 (中文) -->
+        <section id="privacy-zh" class="content-section">
+            <h2 class="section-title">隐私政策</h2>
+            <p><strong>生效日期：2026年2月19日</strong></p>
+            
+            <h3>1. 引言</h3>
+            <p><b>林卓城</b>（以下称"运营方"）尊重并保护所有用户的个人隐私。本隐私政策阐述了我们在您使用本服务时，如何收集、使用、存储、共享和保护您的个人信息，并说明您享有的权利。我们承诺遵守《中华人民共和国个人信息保护法》等相关法律法规，以及我们业务所涉及的国家/地区的数据保护法律的基本原则。</p>
+            
+            <h3>2. 信息收集</h3>
+            <p>2.1 <strong>账户信息</strong>：您注册时提供的电子邮箱；使用第三方登录时，该平台提供的唯一标识符、公开昵称及头像。</p>
+            <p>2.2 <strong>内容信息</strong>：您主动发布的博客文章、评论内容、在小工具中输入的数据。</p>
+            <p>2.3 <strong>日志与设备信息</strong>：为保障服务安全运行，我们自动收集IP地址、浏览器类型、操作系统版本、访问时间等必要信息。</p>
+            
+            <h3>3. 信息使用</h3>
+            <p>我们仅在以下必要目的范围内使用您的信息：</p>
+            <ul>
+                <li>向您提供、维护和改进本服务。</li>
+                <li>进行身份验证、安全防范和故障排查。</li>
+                <li>遵守适用的法律法规。</li>
+            </ul>
+            
+            <h3>4. 信息共享与转让</h3>
+            <p>4.1 我们<strong>不会</strong>出售您的个人信息。</p>
+            <p>4.2 我们仅在以下情况下共享信息：</p>
+            <ul>
+                <li>征得您的明确同意。</li>
+                <li>向可信赖的第三方服务提供商共享，他们仅在为我们提供服务所需范围内接触信息，并受合同约束。</li>
+                <li>为遵守法律义务、应对诉讼、保护我们或他人的权益和安全。</li>
+            </ul>
+            <p>4.3 如发生合并、收购等，您的个人信息可能作为交易的一部分被转移，我们将确保信息接收方继续受本政策约束。</p>
+            
+            <h3>5. 数据存储与跨境传输</h3>
+            <p>5.1 我们在中华人民共和国境内收集和产生的个人信息，将存储在境内。</p>
+            <p>5.2 您的个人信息可能会被传输至您所在国家/地区之外进行处理。当发生此类跨境传输时，我们将采取适当措施确保传输符合适用法律的要求。</p>
+            
+            <h3>6. 您的权利</h3>
+            <p>根据您所在地的法律，您可能拥有以下权利：</p>
+            <ul>
+                <li><strong>访问与更正</strong>：查询、更正您的个人信息。</li>
+                <li><strong>删除</strong>：在特定条件下，请求删除您的个人信息。</li>
+                <li><strong>注销账户</strong>：您可以通过产品设置或联系我们来申请注销账户。</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <h4><i class="fas fa-exclamation-circle"></i> 数据删除说明</h4>
+                <p>若您需要删除您的个人数据（包括通过第三方账号登录产生的关联数据），请发送邮件至<strong>privacy@lzc2002.top</strong>提出明确的删除请求。我们在核实您的身份后，<strong>将在收到邮件的24小时内启动删除流程</strong>，并依据相关法律法规的要求完成数据删除。部分信息的删除可能需要您同时联系相关第三方平台进行处理。</p>
+            </div>
+            
+            <div class="important-note">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <p><strong>重要提示：</strong>请确保在删除请求邮件中提供足够的信息以便我们验证您的身份，这通常包括您注册时使用的邮箱地址或用户名。我们会在处理完成后向您发送确认邮件。</p>
+                </div>
+            </div>
+            
+            <h3>7. 儿童隐私</h3>
+            <p>我们的服务不面向未满14周岁的儿童。如果我们发现无意中收集了儿童个人信息，将设法尽快删除。</p>
+            
+            <h3>8. 政策更新</h3>
+            <p>我们可能更新本政策。更新后，我们将通过本页面发布新版本并更新生效日期。</p>
+            
+            <div class="contact-info">
+                <h4>联系我们</h4>
+                <p>如果您对本政策有任何疑问、意见，或希望行使您的个人权利（包括数据删除），请通过以下方式联系我们：</p>
+                <a href="mailto:privacy@lzc2002.top" class="email-link">privacy@lzc2002.top</a>
+                <p style="margin-top: 10px; font-size: 0.9rem;">我们通常会在1-3个工作日内回复您的请求。</p>
+            </div>
+        </section>
+
+        <!-- 隐私政策 (English) -->
+        <section id="privacy-en" class="content-section">
+            <h2 class="section-title">Privacy Policy</h2>
+            <p><strong>Effective Date: February 19, 2026</strong></p>
+            
+            <h3>1. Introduction</h3>
+            <p><b>Lin Zhuocheng</b> (the "Operator") respects and protects user privacy. This Privacy Policy explains how we collect, use, store, share, and protect your personal information when you use our Services, and outlines your rights. We comply with relevant laws of the People's Republic of China and fundamental principles of data protection laws in other applicable jurisdictions.</p>
+            
+            <h3>2. Information We Collect</h3>
+            <p>2.1 <strong>Account Information</strong>: Your email address; identifier, public name, and profile picture from third-party login.</p>
+            <p>2.2 <strong>Content Information</strong>: Blog posts, comments you publish, and data you input into tools.</p>
+            <p>2.3 <strong>Log and Device Information</strong>: IP address, browser type, OS version, access time, etc., for security and operation.</p>
+            
+            <h3>3. How We Use Your Information</h3>
+            <p>We use your information only for necessary purposes:</p>
+            <ul>
+                <li>To provide, maintain, and improve our Services.</li>
+                <li>For authentication, security, and troubleshooting.</li>
+                <li>To comply with applicable laws.</li>
+            </ul>
+            
+            <h3>4. Information Sharing and Transfer</h3>
+            <p>4.1 We do <strong>not</strong> sell your personal information.</p>
+            <p>4.2 We share information only:</p>
+            <ul>
+                <li>With your explicit consent.</li>
+                <li>With trusted third-party providers under strict contractual obligations.</li>
+                <li>To comply with legal obligations or protect rights and safety.</li>
+            </ul>
+            <p>4.3 Your information may be transferred as part of a business transaction, ensuring the recipient is bound by this Policy.</p>
+            
+            <h3>5. Data Storage and Cross-Border Transfer</h3>
+            <p>5.1 Personal information collected within China is stored domestically.</p>
+            <p>5.2 Your information may be transferred outside your country/region for processing. We implement appropriate safeguards for such transfers.</p>
+            
+            <h3>6. Your Rights</h3>
+            <p>Depending on your location, you may have rights to:</p>
+            <ul>
+                <li>Access and correct your personal information.</li>
+                <li>Request deletion of your personal information.</li>
+                <li>Deactivate your account.</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <h4><i class="fas fa-exclamation-circle"></i> Data Deletion Instructions</h4>
+                <p>If you need to delete your personal data (including data associated with third-party logins), please send an email to <strong>privacy@lzc2002.top</strong> with a clear deletion request. After verifying your identity, <strong>we will initiate the deletion process within 24 hours of receiving the email</strong> and complete it in accordance with applicable laws. Deletion of some information may require you to contact the relevant third-party platform simultaneously.</p>
+            </div>
+            
+            <div class="important-note">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <p><strong>Important Note:</strong> Please provide sufficient information in your deletion request email to allow us to verify your identity, which typically includes the email address or username you used to register. We will send you a confirmation email upon completion of the process.</p>
+                </div>
+            </div>
+            
+            <h3>7. Children's Privacy</h3>
+            <p>Our Services are not directed at children under 14. We will promptly delete any inadvertently collected children's information.</p>
+            
+            <h3>8. Updates to This Policy</h3>
+            <p>We may update this Policy. The updated version will be posted here with a revised date.</p>
+            
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>For any questions, comments, or to exercise your rights (including data deletion), contact us at:</p>
+                <a href="mailto:privacy@lzc2002.top" class="email-link">privacy@lzc2002.top</a>
+                <p style="margin-top: 10px; font-size: 0.9rem;">We typically respond to requests within 1-3 business days.</p>
+            </div>
+        </section>
+
+        <!-- 备案信息 (中文) -->
+        <section id="icp-zh" class="content-section">
+            <h2 class="section-title">备案信息</h2>
+            <p><strong>最后更新：2026年2月19日</strong></p>
+            
+            <h3>网站备案信息</h3>
+            <p>根据中华人民共和国相关法律法规，本网站已完成必要的备案手续。以下是我们的备案信息：</p>
+            
+            <div class="icp-info">
+                <div class="icp-number">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>公安机关备案号：粤公网安备44011502001113号</span>
+                </div>
+                <p class="icp-detail">该备案号由广东省公安机关颁发，表明本网站已按照《计算机信息网络国际联网安全保护管理办法》完成公安备案。</p>
+            </div>
+            
+            <div class="icp-info">
+                <div class="icp-number">
+                    <i class="fas fa-file-alt"></i>
+                    <span>ICP备案号：粤ICP备2023073334号-1</span>
+                </div>
+                <p class="icp-detail">该备案号由工业和信息化部颁发，表明本网站已按照《互联网信息服务管理办法》完成ICP备案。</p>
+            </div>
+            
+            <div class="icp-info">
+                <div class="icp-number">
+                    <i class="fas fa-file-alt"></i>
+                    <span>ICP备案号：粤ICP备2023073334号-2A</span>
+                </div>
+                <p class="icp-detail">该备案号适用于本网站特定服务模块的备案信息。</p>
+            </div>
+            
+            <div class="icp-info">
+                <div class="icp-number">
+                    <i class="fas fa-file-alt"></i>
+                    <span>ICP备案号：粤ICP备2023073334号-3K</span>
+                </div>
+                <p class="icp-detail">该备案号适用于本网站扩展服务内容的备案信息。</p>
+            </div>
+            
+            <h3>备案主体信息</h3>
+            <p><strong>备案单位名称：</strong>林卓城</p>
+            <p><strong>网站名称：</strong>lzc2002.top 工具箱服务</p>
+            <p><strong>网站负责人：</strong>林卓城</p>
+            <p><strong>审核时间：</strong>2026年2月</p>
+            
+            <h3>备案查询</h3>
+            <p>您可以通过以下官方渠道核实我们的备案信息：</p>
+            <ul>
+                <li><strong>工信部ICP/IP地址/域名信息备案管理系统：</strong> <a href="https://beian.miit.gov.cn" target="_blank">https://beian.miit.gov.cn</a></li>
+                <li><strong>全国互联网安全管理服务平台：</strong> <a href="http://www.beian.gov.cn" target="_blank">http://www.beian.gov.cn</a></li>
+            </ul>
+            
+            <div class="important-note">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <p><strong>重要提示：</strong>备案信息是网站合法运营的重要凭证。如您发现任何冒用或伪造备案信息的情况，请立即通过以下联系方式向我们报告。</p>
+                </div>
+            </div>
+            
+            <h3>合规声明</h3>
+            <p>我们承诺严格遵守中华人民共和国相关法律法规，包括但不限于：</p>
+            <ul>
+                <li>《中华人民共和国网络安全法》</li>
+                <li>《互联网信息服务管理办法》</li>
+                <li>《计算机信息网络国际联网安全保护管理办法》</li>
+                <li>《中华人民共和国个人信息保护法》</li>
+            </ul>
+            <p>我们将持续完善网站安全管理措施，保护用户信息安全，维护良好的网络环境。</p>
+            
+            <div class="contact-info">
+                <h4>联系我们</h4>
+                <p>如果您对我们的备案信息有任何疑问，或需要进一步核实，请通过以下方式联系我们：</p>
+                <a href="mailto:i@lzc2002.top" class="email-link">i@lzc2002.top</a>
+                <p style="margin-top: 10px; font-size: 0.9rem;">我们将在1-3个工作日内回复您的咨询。</p>
+            </div>
+        </section>
+
+        <!-- 备案信息 (English) -->
+        <section id="icp-en" class="content-section">
+            <h2 class="section-title">Filing Information</h2>
+            <p><strong>Last Updated: February 19, 2026</strong></p>
+            
+            <h3>Website Filing Information</h3>
+            <p>According to relevant laws and regulations of the People's Republic of China, this website has completed the necessary filing procedures. The following is our filing information:</p>
+            
+            <div class="icp-info">
+                <div class="icp-number">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Public Security Bureau Filing Number: 粤公网安备44011502001113号</span>
+                </div>
+                <p class="icp-detail">This filing number is issued by the Guangdong Provincial Public Security Bureau, indicating that this website has completed public security filing in accordance with the "Measures for the Security Protection Administration of International Networking of Computer Information Networks".</p>
+            </div>
+            
+            <div class="icp-info">
+                <div class="icp-number">
+                    <i class="fas fa-file-alt"></i>
+                    <span>ICP Filing Number: 粤ICP备2023073334号-1</span>
+                </div>
+                <p class="icp-detail">This filing number is issued by the Ministry of Industry and Information Technology, indicating that this website has completed ICP filing in accordance with the "Administrative Measures for Internet Information Services".</p>
+            </div>
+            
+            <div class="icp-info">
+                <div class="icp-number">
+                    <i class="fas fa-file-alt"></i>
+                    <span>ICP Filing Number: 粤ICP备2023073334号-2A</span>
+                </div>
+                <p class="icp-detail">This filing number applies to the filing information of specific service modules of this website.</p>
+            </div>
+            
+            <div class="icp-info">
+                <div class="icp-number">
+                    <i class="fas fa-file-alt"></i>
+                    <span>ICP Filing Number: 粤ICP备2023073334号-3K</span>
+                </div>
+                <p class="icp-detail">This filing number applies to the filing information of extended service content of this website.</p>
+            </div>
+            
+            <h3>Filing Entity Information</h3>
+            <p><strong>Filing Entity Name:</strong> Lin Zhuocheng</p>
+            <p><strong>Website Name:</strong> lzc2002.top Tool Services</p>
+            <p><strong>Website Responsible Person:</strong> Lin Zhuocheng</p>
+            <p><strong>Approval Time:</strong> February 2026</p>
+            
+            <h3>Filing Verification</h3>
+            <p>You can verify our filing information through the following official channels:</p>
+            <ul>
+                <li><strong>MIIT ICP/IP Address/Domain Name Information Filing Management System:</strong> <a href="https://beian.miit.gov.cn" target="_blank">https://beian.miit.gov.cn</a></li>
+                <li><strong>National Internet Security Management Service Platform:</strong> <a href="http://www.beian.gov.cn" target="_blank">http://www.beian.gov.cn</a></li>
+            </ul>
+            
+            <div class="important-note">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <p><strong>Important Note:</strong> Filing information is an important credential for the legal operation of websites. If you discover any misuse or forgery of filing information, please report it to us immediately through the following contact information.</p>
+                </div>
+            </div>
+            
+            <h3>Compliance Statement</h3>
+            <p>We are committed to strictly complying with relevant laws and regulations of the People's Republic of China, including but not limited to:</p>
+            <ul>
+                <li>Cybersecurity Law of the People's Republic of China</li>
+                <li>Administrative Measures for Internet Information Services</li>
+                <li>Measures for the Security Protection Administration of International Networking of Computer Information Networks</li>
+                <li>Personal Information Protection Law of the People's Republic of China</li>
+            </ul>
+            <p>We will continuously improve website security management measures, protect user information security, and maintain a good network environment.</p>
+            
+            <div class="contact-info">
+                <h4>Contact Us</h4>
+                <p>If you have any questions about our filing information or need further verification, please contact us:</p>
+                <a href="mailto:i@lzc2002.top" class="email-link">i@lzc2002.top</a>
+                <p style="margin-top: 10px; font-size: 0.9rem;">We will respond to your inquiry within 1-3 business days.</p>
+            </div>
+        </section>
+
+        <!-- 同意按钮区域 -->
+        <button id="agreement-btn" class="agreement-btn">
+                <i class="fas fa-check-circle"></i> <span id="agreement-btn-text">我同意以上所有内容</span>
+        </button>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p id="footer-text">&copy; 2026 lzc2002.top 保留所有权利.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+                <i class="far fa-envelope"></i> <a href="mailto:i@lzc2002.top">i@lzc2002.top</a> | <a href="mailto:privacy@lzc2002.top">privacy@lzc2002.top</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取所有按钮和内容区域
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const docButtons = document.querySelectorAll('.selector-btn');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            // 获取需要动态更新的元素
+            const mainTitle = document.getElementById('main-title');
+            const subtitle = document.getElementById('subtitle');
+            const lastUpdated = document.getElementById('last-updated');
+            const selectorTitle = document.getElementById('selector-title');
+            const footerText = document.getElementById('footer-text');
+            
+            // 获取同意按钮相关元素
+            const agreementContainer = document.getElementById('agreement-container');
+            const agreementTitle = document.getElementById('agreement-title');
+            const agreementDesc = document.getElementById('agreement-desc');
+            const agreementBtn = document.getElementById('agreement-btn');
+            const agreementBtnText = document.getElementById('agreement-btn-text');
+            
+            // 当前选择的语言和文档类型
+            let currentLang = 'zh';
+            let currentDoc = 'terms';
+            
+            // 重定向URL
+            let redirectUrl = '';
+            
+            // 语言和标题映射
+            const languageTexts = {
+                zh: {
+                    mainTitle: '服务条款与隐私政策',
+                    subtitle: '请在使用我们的服务前，仔细阅读以下条款和政策',
+                    lastUpdated: '最后更新日期：2026年2月19日',
+                    selectorTitle: '选择',
+                    footerText: '&copy; 2026 lzc2002.top 保留所有权利.',
+                    terms: '服务条款',
+                    privacy: '隐私政策',
+                    icp: '备案信息',
+                    agreementTitle: '我已阅读并同意以上所有内容',
+                    agreementDesc: '点击下方按钮表示您已阅读、理解并同意服务条款、隐私政策及备案信息的所有内容',
+                    agreementBtnText: '我同意以上所有内容'
+                },
+                en: {
+                    mainTitle: 'Terms of Service & Privacy Policy',
+                    subtitle: 'Please read the following terms and policies carefully before using our services',
+                    lastUpdated: 'Last Updated: February 19, 2026',
+                    selectorTitle: 'Select',
+                    footerText: '&copy; 2026 lzc2002.top. All rights reserved.',
+                    terms: 'Terms of Service',
+                    privacy: 'Privacy Policy',
+                    icp: 'Filing Information',
+                    agreementTitle: 'I have read and agree to all of the above',
+                    agreementDesc: 'Click the button below to indicate that you have read, understood, and agree to all contents of the Terms of Service, Privacy Policy, and Filing Information',
+                    agreementBtnText: 'I agree to all of the above'
+                }
+            };
+            
+            // 从URL参数中获取初始设置
+            function getInitialParams() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const pageParam = urlParams.get('page');
+                const langParam = urlParams.get('lang');
+                const redirectParam = urlParams.get('redirect');
+                
+                // 处理语言参数（支持 zh-cn 和 zh 格式）
+                let lang = 'zh'; // 默认中文
+                if (langParam === 'en') {
+                    lang = 'en';
+                } else if (langParam === 'zh-cn' || langParam === 'zh') {
+                    lang = 'zh';
+                }
+                
+                // 处理页面参数
+                let doc = 'terms'; // 默认服务条款
+                if (pageParam === 'privacy') {
+                    doc = 'privacy';
+                } else if (pageParam === 'terms') {
+                    doc = 'terms';
+                } else if (pageParam === 'icp') {
+                    doc = 'icp';
+                }
+                
+                // 处理重定向参数
+                if (redirectParam) {
+                    redirectUrl = decodeURIComponent(redirectParam);
+                }
+                
+                return { lang, doc };
+            }
+            
+            // 检查是否需要显示同意按钮
+            function checkRedirectAndShowAgreement() {
+                if (redirectUrl) {
+                    // 更新同意按钮区域的文本
+                    const texts = languageTexts[currentLang];
+                    agreementBtnText.textContent = texts.agreementBtnText;
+                    
+                    // 添加同意按钮点击事件
+                    agreementBtn.onclick = function() {
+                        // 跳转到重定向URL
+                        window.location.href = redirectUrl;
+                    };
+                } else {
+                    // 隐藏同意按钮区域
+                    agreementContainer.style.display = 'none';
+                }
+            }
+            
+            // 更新界面文字
+            function updateInterfaceTexts(lang) {
+                const texts = languageTexts[lang];
+                
+                // 更新标题区域
+                mainTitle.innerHTML = `${texts.mainTitle}`;
+                subtitle.textContent = texts.subtitle;
+                lastUpdated.innerHTML = `<i class="far fa-calendar-alt"></i> ${texts.lastUpdated}`;
+                selectorTitle.textContent = texts.selectorTitle;
+                footerText.innerHTML = texts.footerText;
+                
+                // 更新文档按钮文字
+                docButtons.forEach(btn => {
+                    const btnText = btn.querySelector('.btn-text');
+                    const docType = btn.getAttribute('data-doc');
+                    btnText.textContent = texts[docType];
+                });
+                
+                // 更新同意按钮区域文字（如果显示的话）
+                if (redirectUrl) {
+                    agreementBtnText.textContent = texts.agreementBtnText;
+                }
+            }
+            
+            // 更新按钮状态
+            function updateButtonStates(lang, doc) {
+                // 更新语言按钮状态
+                langButtons.forEach(btn => {
+                    if (btn.getAttribute('data-lang') === lang) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+                
+                // 更新文档按钮状态
+                docButtons.forEach(btn => {
+                    if (btn.getAttribute('data-doc') === doc) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            }
+            
+            // 更新URL参数
+            function updateUrlParams() {
+                // 创建新的URLSearchParams对象
+                const params = new URLSearchParams();
+                params.set('page', currentDoc);
+                // 为了URL友好，中文使用 zh-cn
+                params.set('lang', currentLang === 'zh' ? 'zh-cn' : currentLang);
+                
+                // 如果存在重定向URL，也添加到参数中
+                if (redirectUrl) {
+                    params.set('redirect', encodeURIComponent(redirectUrl));
+                }
+                
+                // 构建新的URL
+                const newUrl = `${window.location.pathname}?${params.toString()}`;
+                
+                // 更新浏览器URL（不刷新页面）
+                window.history.replaceState(null, '', newUrl);
+            }
+            
+            // 语言按钮点击事件
+            langButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // 移除所有语言按钮的active类
+                    langButtons.forEach(btn => btn.classList.remove('active'));
+                    // 为当前按钮添加active类
+                    button.classList.add('active');
+                    
+                    // 更新当前语言
+                    currentLang = button.getAttribute('data-lang');
+                    
+                    // 更新界面文字
+                    updateInterfaceTexts(currentLang);
+                    
+                    // 更新URL参数
+                    updateUrlParams();
+                    
+                    // 更新显示的内容
+                    updateContentDisplay();
+                });
+            });
+            
+            // 文档按钮点击事件
+            docButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // 移除所有文档按钮的active类
+                    docButtons.forEach(btn => btn.classList.remove('active'));
+                    // 为当前按钮添加active类
+                    button.classList.add('active');
+                    
+                    // 更新当前文档类型
+                    currentDoc = button.getAttribute('data-doc');
+                    
+                    // 更新URL参数
+                    updateUrlParams();
+                    
+                    // 更新显示的内容
+                    updateContentDisplay();
+                });
+            });
+            
+            // 更新内容显示的函数
+            function updateContentDisplay() {
+                // 隐藏所有内容区域
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // 显示对应的内容区域
+                const targetId = `${currentDoc}-${currentLang}`;
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            }
+            
+            // 页面初始化
+            function initializePage() {
+                // 从URL参数获取初始设置
+                const initialParams = getInitialParams();
+                currentLang = initialParams.lang;
+                currentDoc = initialParams.doc;
+                
+                // 更新按钮状态
+                updateButtonStates(currentLang, currentDoc);
+                
+                // 更新界面文字
+                updateInterfaceTexts(currentLang);
+                
+                // 检查并显示同意按钮
+                checkRedirectAndShowAgreement();
+                
+                // 更新URL参数（确保URL格式一致）
+                updateUrlParams();
+                
+                // 显示对应内容
+                updateContentDisplay();
+            }
+            
+            // 监听URL变化（用户点击浏览器前进/后退按钮时）
+            window.addEventListener('popstate', function() {
+                const params = getInitialParams();
+                currentLang = params.lang;
+                currentDoc = params.doc;
+                
+                updateButtonStates(currentLang, currentDoc);
+                updateInterfaceTexts(currentLang);
+                checkRedirectAndShowAgreement();
+                updateContentDisplay();
+            });
+            
+            // 初始化页面
+            initializePage();
+        });
+    </script>
+</body>
+</html>
