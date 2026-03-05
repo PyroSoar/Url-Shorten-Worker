@@ -29,6 +29,7 @@
             background-color: #f9f9f9;
             color: var(--text-color);
             line-height: 1.6;
+            text-autospace: normal;
         }
 
         .container {
@@ -435,7 +436,6 @@
     <div class="container">
         <!-- 选择器区域 -->
         <div class="selector-container">
-            <h2><i class="fas fa-cog"></i> <span id="selector-title">选择</span></h2>
             
             <!-- 语言选择 -->
             <div class="lang-selector">
@@ -865,7 +865,6 @@
             const mainTitle = document.getElementById('main-title');
             const subtitle = document.getElementById('subtitle');
             const lastUpdated = document.getElementById('last-updated');
-            const selectorTitle = document.getElementById('selector-title');
             const footerText = document.getElementById('footer-text');
             
             // 获取同意按钮相关元素
@@ -971,7 +970,6 @@
                 mainTitle.innerHTML = `${texts.mainTitle}`;
                 subtitle.textContent = texts.subtitle;
                 lastUpdated.innerHTML = `<i class="far fa-calendar-alt"></i> ${texts.lastUpdated}`;
-                selectorTitle.textContent = texts.selectorTitle;
                 footerText.innerHTML = texts.footerText;
                 
                 // 更新文档按钮文字
